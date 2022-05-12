@@ -16,14 +16,14 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-import "controllers"
-import "bootstrap"
+// import "controllers"
+// import "bootstrap"
 
-import { icon_drop } from '../components/dropdown';
-import { initMapbox } from '../plugins/init_mapbox';
+// import { icon_drop } from '../components/dropdown';
+// import { initMapbox } from '../plugins/init_mapbox';
 
-document.addEventListener('turbolinks:load', () => {
-  // Call your JS functions here
-  icon_drop();
-  initMapbox();
-});
+// document.addEventListener('turbolinks:load', () => {
+//   // Call your JS functions here
+//   icon_drop();
+//   initMapbox();
+// });
