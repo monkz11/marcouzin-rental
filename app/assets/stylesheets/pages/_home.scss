@@ -1,12 +1,3 @@
-.dream_holiday {
-  font-size: 80px;
-  font-weight: 600;
-  width: 800px;
-  margin-left: 50px;
-  margin-top: 100px;
-  color: #1A4341;
-}
-
 .home_video {
  width: 100vw;
  height: 100vh;
@@ -21,4 +12,71 @@ height: 100vh;
 display: flex;
 align-items: center;
 justify-content: center;
+}
+
+h1.home {
+  color: #1A4341;
+  font-size: 100px;
+  font-weight: bold;
+}
+
+.home {
+  padding-bottom: 100px;
+}
+
+.dream_holiday {
+  font-size: 80px;
+  font-weight: 600;
+  width: 800px;
+  margin-left: 50px;
+  margin-top: 100px;
+  color: #1A4341;
+}
+
+.dependence_living {
+  object-fit: cover;
+}
+
+.sub_video {
+  display: flex;
+}
+
+.all_images {
+  display: flex;
+  padding-top: 120px;
+}
+
+.top_images {
+  margin-bottom: 5px;
+}
+
+.img_1 {
+  margin-right: 5px;
+  margin-left: 60px;
+  border-radius: 4% 0% 0% 4%;
+}
+
+.img_2 {
+  margin-bottom: 5px;
+}
+
+.img_4 {
+  border-radius: 0% 4% 0% 0%;
+  margin-bottom: 5px;
+  margin-right: 50px;
+  margin-left: 5px;
+}
+
+.img_5 {
+  border-radius: 0% 0% 4% 0%;
+  margin-right: 50px;
+  margin-left: 5px;
+}
+
+.sub_text {
+  margin-left: 50px;
+  margin-right: 50px;
+  color: #1A4341;
+  font-size: 20px;
+  margin-top: 50px;
 }
