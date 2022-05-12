@@ -12,7 +12,10 @@
     </%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   </head>
+
   <body style="background-color: #B9D5DB">
+    <%= render 'shared/dropdown' %>
     <%= yield %>
+    <%= render 'shared/footer'%>
   </body>
 </html>
