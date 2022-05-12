@@ -42,4 +42,214 @@
       </div>
     </div>
   </div>
+
+  <div class="near_me">
+    <h1>Location</h1>
+    <div id='map' style='height: 300px;'></div>
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoibW9ua3oxMSIsImEiOiJja3ZjcGpkcmNhemljMnBuemllb294Z20yIn0.LFHcV2_PcE_wc5ttNnMM1g';
+      const map = new mapboxgl.Map({
+      container: 'map', // container ID
+      style: 'mapbox://styles/monkz11/ckx3m9sw30see14lycwgt53yh', // style URL
+      center: [1.028191, 44.808654], // starting position [lng, lat]
+      zoom: 10 // starting zoom
+      });
+
+      map.on('load', () => {
+      // Add a GeoJSON source with 3 points.
+      map.addSource('points', {
+      'type': 'geojson',
+        'data': {
+        'type': 'FeatureCollection',
+        'features': [
+            {
+              'type': 'Feature',
+              'properties': {},
+              'geometry': {
+              'type': 'Point',
+              'coordinates': [1.013516, 44.809128]
+              }
+            },
+            {
+              'type': 'Feature',
+              'properties': {},
+              'geometry': {
+              'type': 'Point',
+              'coordinates': [1.043780, 44.870100]
+              }
+            },
+            {
+              'type': 'Feature',
+              'properties': {},
+              'geometry': {
+              'type': 'Point',
+              'coordinates': [1.1134668682891025 ,44.824218978647224]
+              }
+            },
+            {
+              'type': 'Feature',
+              'properties': {},
+              'geometry': {
+              'type': 'Point',
+              'coordinates': [1.0079958233608142 ,44.77637253227644]
+              }
+            }
+          ]
+        }
+      });
+
+      // Add a circle layer
+      map.addLayer({
+      'id': 'circle',
+      'type': 'circle',
+      'source': 'points',
+      'paint': {
+      'circle-color': '#4264fb',
+      'circle-radius': 8,
+      'circle-stroke-width': 2,
+      'circle-stroke-color': '#ffffff'
+      }
+      });
+
+      // Center the map on the coordinates of any clicked circle from the 'circle' layer.
+      map.on('click', 'circle', (e) => {
+        map.flyTo({
+            center: e.features[0].geometry.coordinates
+          });
+      });
+
+      // Change the cursor to a pointer when the it enters a feature in the 'circle' layer.
+      map.on('mouseenter', 'circle', () => {
+        map.getCanvas().style.cursor = 'pointer';
+      });
+
+      // Change it back to a pointer when it leaves.
+      map.on('mouseleave', 'circle', () => {
+          map.getCanvas().style.cursor = '';
+        });
+      });
+
+
+    </script>
+
+
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <div class="cards_near_container">
+          <div class="cards_near">
+          <%= image_tag "_RAS2430.jpg", alt: "Main house", class: "img_near", width: 120, height:150 %>
+          <p>Marcousin</p>
+          </div>
+          <div class="cards_near top">
+          <%= image_tag "accueil-02.jpg", alt: "golf course", class: "img_near", width: 120, height:150 %>
+          <p>Golf du lolivarie</p>
+          </div>
+          <div class="cards_near">
+           <%= image_tag "Saint-cyprian.jpg", alt: "Saint-cyprian", class: "img_near", width: 120, height:150 %>
+           <p>Saint-cyprian</p>
+          </div>
+          <div class="cards_near top">
+           <%= image_tag "milandes.jpg", alt: "Chateux Milandes", class: "img_near", width: 120, height:150 %>
+           <p>Chateau Milandes</p>
+          </div>
+          <div class="cards_near">
+           <%= image_tag "belves.jpg", alt: "Belves", class: "img_near", width: 120, height:150 %>
+           <p>Belves</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mySlides">
+        <div class="cards_near_container">
+          <div class="cards_near">
+            <%= image_tag "sarlat.jpg", alt: "Sarlat", class: "img_near", width: 120, height:150 %>
+            <p>Sarlat</p>
+          </div>
+          <div class="cards_near top">
+          <%= image_tag "domme.jpg", alt: "Domme", class: "img_near", width: 120, height:150 %>
+          <p>Domme</p>
+          </div>
+          <div class="cards_near">
+           <%= image_tag "lasceux.jpg", alt: "Lasceux", class: "img_near", width: 120, height:150 %>
+           <p>Lasceux</p>
+          </div>
+          <div class="cards_near top">
+           <%= image_tag "commarque.jpg", alt: "Commarque", class: "img_near", width: 120, height:150 %>
+           <p>Commarque</p>
+          </div>
+          <div class="cards_near">
+           <%= image_tag "castelnaud.jpg", alt: "Castelnaud", class: "img_near", width: 120, height:150 %>
+           <p>Castelnaud</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mySlides">
+        <div class="cards_near_container">
+          <div class="cards_near">
+            <%= image_tag "marquessac.jpg", alt: "Marquessac", class: "img_near", width: 120, height:150 %>
+            <p>Marquessac</p>
+          </div>
+          <div class="cards_near top">
+            <%= image_tag "gageac.jpg", alt: "Roque Gageac", class: "img_near", width: 120, height:150 %>
+            <p>Roque Gageac</p>
+          </div>
+          <div class="cards_near">
+           <%= image_tag "beynac.jpg", alt: "Beynac", class: "img_near", width: 120, height:150 %>
+           <p>Beynac</p>
+          </div>
+          <div class="cards_near top">
+           <%= image_tag "limeuil.jpg", alt: "Limeuil", class: "img_near", width: 120, height:150 %>
+           <p>Limeuil</p>
+          </div>
+          <div class="cards_near">
+           <%= image_tag "eyzies.jpg", alt: "Les Eyzies", class: "img_near", width: 120, height:150 %>
+           <p>Les Eyzies</p>
+          </div>
+        </div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+      <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        }
+      </script>
+    </div>
+  </div>
 </div>
