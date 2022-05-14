@@ -27,8 +27,8 @@ h1.home {
 .dream_holiday {
   font-size: 80px;
   font-weight: 600;
-  width: 800px;
-  margin-left: 50px;
+  width: 750px;
+  margin-left: 100px;
   margin-top: 100px;
   color: #1A4341;
 }
@@ -52,7 +52,7 @@ h1.home {
 
 .img_1 {
   margin-right: 5px;
-  margin-left: 60px;
+  margin-left: 100px;
   border-radius: 4% 0% 0% 4%;
 }
 
@@ -63,22 +63,22 @@ h1.home {
 .img_4 {
   border-radius: 0% 4% 0% 0%;
   margin-bottom: 5px;
-  margin-right: 50px;
+  margin-right: 100px;
   margin-left: 5px;
 }
 
 .img_5 {
   border-radius: 0% 0% 4% 0%;
-  margin-right: 50px;
+  margin-right: 100px;
   margin-left: 5px;
 }
 
 .sub_text {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 100px;
+  margin-right: 80px;
   color: #1A4341;
   font-size: 20px;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .our_locations {
@@ -99,6 +99,7 @@ h1.home {
   box-shadow: rgba(0, 0, 0, 0.03) 0px 2px 3px, rgba(0, 0, 0, 0.08) 0px 6px 6px, rgba(0, 0, 0, 0.04) 0px -2px 3px;
   border-radius: 20% 0% 20% 0%;
   transition: transform 500ms;
+  text-decoration: none;
 
   &:hover{
     transform: scale(1.1);
@@ -132,14 +133,12 @@ h1.home {
   font-weight: bold;
   padding-top: 10px;
   color: #1A4341;
-  text-decoration: none;
 }
 
 .location_cards p {
   font-size: 16px;
   padding-top: 20px;
   color: #1A4341;
-  text-decoration: none;
 }
 
 .cards_img {
