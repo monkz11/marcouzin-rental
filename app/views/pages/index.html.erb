@@ -20,20 +20,123 @@
 <div class="container">
   <div class="sub_car">
     <div class="all_cards">
-      <%# <div class="top_cards"> %>
-        <div class="room_card cards_top">
-          <%= image_tag "_RAS3207.jpg", alt: "room", class: "img_dep_card" %>
-          <p>4 Bedrooms</p>
+      <div class="all_images">
+        <%= image_tag "_RAS3207.jpg", alt: "bedroom", class: "dependence_living_1 img_dep_1", width: 370, height:445 %>
+        <div class="top_images">
+          <%= image_tag "_RAS3185.jpg", alt: "Bathroom", class: "dependence_living_1 img_dep_2", width: 370, height:220 %>
+          <%= image_tag "_RAS2421.jpg", alt: "Outdoor area", class: "dependence_living_1 img_dep_3", width: 370, height:220 %>
         </div>
-        <div class="bath_card cards_top">
-          <%= image_tag "_RAS3185.jpg", alt: "bathroom", class: "img_dep_card" %>
-          <p>3 Bathrooms</p>
+        <div class="bottom_images">
+          <%= image_tag "_RAS2488.jpg", alt: "Game area", class: "dependence_living_1 img_dep_4", width: 370, height:220 %>
+          <%= image_tag "_RAS2993.jpg", alt: "Living area", class: "dependence_living_1 img_dep_5", width: 370, height:220 %>
         </div>
-        <div class="ammen_card cards_top">
-          <%= image_tag "_RAS2421.jpg", alt: "outdoor", class: "img_dep_card" %>
-          <p>Outdoor area</p>
+      </div>
+
+
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <div class="cards_near_container">
+          <div class="cards_near_dep">
+            <%= image_tag "_RAS2481.jpg", alt: "Main house", class: "img_near_dep", width: 120, height:150 %>
+          </div>
+            <div class="cards_near_dep top">
+          <%= image_tag "_RAS2483.jpg", alt: "golf course", class: "img_near_dep", width: 120, height:150 %>
+            </div>
+          <div class="cards_near_dep">
+           <%= image_tag "_RAS2494.jpg", alt: "Saint-cyprian", class: "img_near_dep", width: 120, height:150 %>
+          </div>
+          <div class="cards_near_dep top">
+           <%= image_tag "_RAS2495.jpg", alt: "Chateux Milandes", class: "img_near_dep", width: 120, height:150 %>
+          </div>
+          <div class="cards_near_dep">
+           <%= image_tag "_RAS2499.jpg", alt: "Belves", class: "img_near_dep", width: 120, height:150 %>
+          </div>
         </div>
-      <%# </div> %>
+      </div>
+
+      <div class="mySlides">
+        <div class="cards_near_container">
+          <div class="cards_near">
+            <%= image_tag "sarlat.jpg", alt: "Sarlat", class: "img_near", width: 120, height:150 %>
+          </div>
+          <div class="cards_near top">
+          <%= image_tag "domme.jpg", alt: "Domme", class: "img_near", width: 120, height:150 %>
+          </div>
+          <div class="cards_near">
+           <%= image_tag "lasceux.jpg", alt: "Lasceux", class: "img_near", width: 120, height:150 %>
+          </div>
+          <div class="cards_near top">
+           <%= image_tag "commarque.jpg", alt: "Commarque", class: "img_near", width: 120, height:150 %>
+          </div>
+          <div class="cards_near">
+           <%= image_tag "castelnaud.jpg", alt: "Castelnaud", class: "img_near", width: 120, height:150 %>
+          </div>
+        </div>
+      </div>
+
+      <div class="mySlides">
+        <div class="cards_near_container">
+          <div class="cards_near">
+            <%= image_tag "marquessac.jpg", alt: "Marquessac", class: "img_near", width: 120, height:150 %>
+          </div>
+          <div class="cards_near top">
+            <%= image_tag "gageac.jpg", alt: "Roque Gageac", class: "img_near", width: 120, height:150 %>
+          </div>
+          <div class="cards_near">
+           <%= image_tag "beynac.jpg", alt: "Beynac", class: "img_near", width: 120, height:150 %>
+          </div>
+          <div class="cards_near top">
+           <%= image_tag "limeuil.jpg", alt: "Limeuil", class: "img_near", width: 120, height:150 %>
+          </div>
+          <div class="cards_near">
+           <%= image_tag "eyzies.jpg", alt: "Les Eyzies", class: "img_near", width: 120, height:150 %>
+          </div>
+        </div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+      <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        }
+      </script>
+    </div>
+
           <p class="main_text">On entering the Dependance through its main entrance and staircase,
             one finds on the left the living area, a spacious living room with kitchen and dining area.
 
@@ -55,27 +158,6 @@
 
          From the Dependance it is a short walk to the swimming pool either via the park and stairs or via the wood. Next to the swimming pool is the open Pool House with an electrical "plancha" grill plate where one can enjoy a light meal or a barbecue. Kitchen with fridge, dishwasher and barbecue are available.
           </p>
-      <div class="bottom_cards">
-        <div class="bottom_card_text">
-          <div class="outdoor_card cards_bot">
-            <%= image_tag "_RAS2488.jpg", alt: "game area", class: "img_dep_card_left" %>
-            <%= image_tag "_RAS2993.jpg", alt: "living area", class: "img_dep_card_right" %>
-          </div>
-        <p>Salle a vivre and game room</p>
-        </div>
-        <div class="bottom_card_text">
-          <div class="indoor_card cards_bot">
-            <%= image_tag "pool.JPG", alt: "pool", class: "img_dep_card_left" %>
-            <%= image_tag "0.jpg", alt: "pool house", class: "img_dep_card_right" %>
-          </div>
-        <p>Swimming pool and pool house</p>
-        </div>
-      </div>
     </div>
-
-  </div>
-
-  <div class="gallery">
-    <h1>Gallery</h1>
   </div>
 </div>
