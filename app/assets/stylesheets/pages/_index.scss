@@ -58,6 +58,7 @@
   // background-color: white;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 4px, rgba(0, 0, 0, 0.4) 0px 8px 8px, rgba(0, 0, 0, 0.4) 0px -3px 4px;
+  background-color: black;
 }
 
 .img_dep_bed {
@@ -228,4 +229,34 @@
 .text_left {
   margin-left: 120px;
   margin-right: 400px;
+}
+
+.title_ammen {
+  text-align: center;
+  color: #BAD5DB;
+  text-shadow: 2px 2px black;
+}
+
+.mainbod_ammen_top {
+  color: #BAD5DB;
+  text-shadow: 1px 1px black;
+  display: flex;
+  justify-content: space-between;
+  h2 {
+    font-size: 20px;
+  }
+}
+
+.mainbod_ammen_bottom {
+  color: #BAD5DB;
+  text-shadow: 1px 1px black;
+  display: flex;
+  justify-content: space-between;
+  h2 {
+    font-size: 20px;
+  }
+}
+
+.ammen_spacing{
+  margin: 30px;
 }
