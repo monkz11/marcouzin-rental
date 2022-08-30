@@ -1,20 +1,25 @@
-<div class="dropdown">
-  <span><i class="fas fa-bars"></i></span>
-  <div class="dropdown-content">
-    <%= link_to root_path do%>
-      <div class="to_page home_link">
-        <h1>Home</h1>
-      </div>
-    <% end %>
-    <%= link_to dependence_path do%>
-      <div class="to_page dependance_link">
-        <h1>la Dependance</h1>
-      </div>
-    <% end %>
-    <%= link_to pigionier_path do%>
-      <div class="to_page pigionier_link">
-        <h1>Le pigionier</h1>
-      </div>
-    <% end %>
+<div class="top_bar_continer">
+  <div class="dropdown">
+    <span><i class="fas fa-bars"></i></span>
+    <div class="dropdown-content">
+      <%= link_to root_path do%>
+        <div class="to_page home_link">
+          <h1>Home</h1>
+        </div>
+      <% end %>
+      <%= link_to dependence_path do%>
+        <div class="to_page dependance_link">
+          <h1>la Dependance</h1>
+        </div>
+      <% end %>
+      <%= link_to pigionier_path do%>
+       <div class="to_page pigionier_link">
+          <h1>Le pigionier</h1>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="logo_main">
+    <%= image_tag "Logo_marcousin.png", alt: "House and flowers", class: "dependence_living img_1", width: 150, height:150 %>
   </div>
 </div>
