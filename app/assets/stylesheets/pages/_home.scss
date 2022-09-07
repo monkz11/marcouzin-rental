@@ -281,37 +281,29 @@ h1.home {
   }
 
   .sub_text {
-  font-size: 15px;
+  font-size: 12px;
   }
 
   .img_1 {
-  margin-right: 2px;
+  // margin-right: 2px;
   width: 100px;
   height: 150px;
   }
 
   .img_2 {
-  margin-bottom: 2px;
-  width: 100px;
-  height: 74px;
+  display: none;
   }
 
   .img_3 {
-  width: 100px;
-  height: 74px;
+  display: none;
   }
 
   .img_4 {
-  margin-bottom: 2px;
-  margin-left: 2px;
-  width: 100px;
-  height: 74px;
+  display: none;
   }
 
   .img_5 {
-  margin-left: 2px;
-  width: 100px;
-  height: 74px;
+  display: none;
   }
 
   .principle_card {
@@ -338,13 +330,16 @@ h1.home {
   }
 
   .cards_near {
-  height: 50px;
+  height: 70px;
   width: 50px;
-  margin: 20px;
+  margin: 5px;
+    p{
+      font-size: 10px;
+    }
   }
 
   .img_near{
-  height: 50px;
+  height: 60px;
   width: 50px;
   }
 }
