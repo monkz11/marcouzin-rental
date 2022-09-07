@@ -263,3 +263,51 @@ h1.home {
 .top {
   margin-top: 50px;
 }
+
+@media screen and (max-width:800px) {
+  h1.home {
+  font-size: 50px;
+  }
+
+  .dream_holiday {
+  font-size: 50px;
+  }
+
+  .sub_text {
+  font-size: 15px;
+  }
+
+  .principle_card {
+  width: 150px;
+  height: 360px;
+  }
+
+  .pigonier_card {
+  width: 150px;
+  height: 360px;
+  }
+
+  .cards_img {
+  width: 150px;
+  height: 200px;
+  }
+
+  .location_cards h2 {
+  font-size: 20px;
+  }
+
+  .location_cards p {
+  font-size: 13px;
+  }
+
+  .cards_near {
+  height: 50px;
+  width: 50px;
+  margin: 20px;
+  }
+
+  .img_near{
+  height: 50px;
+  width: 50px;
+  }
+}
