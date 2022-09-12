@@ -304,6 +304,13 @@
 
 .icon_text{
   display: flex;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.icon_text_spacing{
+  padding-left: 15px;
 }
 
 .icon_text_info{
