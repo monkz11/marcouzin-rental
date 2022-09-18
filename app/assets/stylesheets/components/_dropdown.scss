@@ -61,8 +61,9 @@
   border-radius: 10px 10px 0% 0%;
 }
 
-.pigionier_link {
+.contact_link {
   border-radius:  0% 0% 10px 10px;
+  text-align: center;
 }
 
 .top_bar_continer{
@@ -74,6 +75,15 @@
 }
 
 .logo_main {
+  padding-top: 10px;
+  padding-right: 10px;
   // position: -webkit-sticky;
   // position: sticky;
+}
+
+@media screen and (max-width:800px){
+  .img_logo {
+    width: 50px;
+    height: 80px;
+  }
 }
